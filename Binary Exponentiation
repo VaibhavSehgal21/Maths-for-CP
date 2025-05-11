@@ -1,0 +1,19 @@
+  
+    //Binary Exponentiation
+    
+    long long findPower( long long a, long long b){
+       
+          if(b==0){
+            return 1; 
+          }
+          long long half =findPower(a,b/2);
+          long long ans=(half *half)%M;
+
+          if(b%2){
+            ans=(a*ans) %M;
+          }
+          
+        
+          return  ans;
+
+    }
