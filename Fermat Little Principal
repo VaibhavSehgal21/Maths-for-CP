@@ -1,0 +1,39 @@
+// Fermat Little Pricipal 
+
+// (a^(p-1))%p = 1
+// (a^p-2)%p = a^-1     
+
+#include <iostream>
+using namespace std;
+const int MOD = 1e9 + 7;
+
+// Fast exponentiation (a^b % mod)
+long long power(long long a, long long b, int mod) {
+    long long result = 1;
+    a = a % mod;
+    while (b > 0) {
+        if (b % 2 == 1)
+            result = (result * a) % mod;
+        a = (a * a) % mod;
+        b /= 2;
+    }
+    return result;
+}
+
+// Modular inverse using Fermat's Little Theorem
+long long modInverse(long long a, int mod) {
+    // a^(mod-2) % mod
+    return power(a, mod - 2, mod);
+}
+
+int main() {
+    long long a = 5;
+    int p = MOD;  // prime modulus
+
+    cout << "Modular inverse of " << a << " mod " << p << " is: ";
+    cout << modInverse(a, p) << endl;
+
+    return 0;
+}
+
+
