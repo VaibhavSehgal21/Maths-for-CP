@@ -1,1 +1,9 @@
+// GCD 
 
+GCD(A,B)=GCD(B,A%B);
+GCD(A,0)=A;
+GCD(A,B)<=MIN(A,B);
+
+// LCM 
+
+LCM(A,B)=A*B/GCD(A,B) ;
