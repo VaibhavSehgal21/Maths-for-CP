@@ -1,0 +1,14 @@
+ double r(double x, int n)
+    {
+        if(!n) return 1;
+        if(n==1) return x;
+        double half= r(x,n/2);
+        return half*half*(n%2?x:1);
+    }
+
+
+    double myPow(double x, int n) {
+        
+        return n>=0?r(x,n):1/r(x,-(n+1))*1/x;
+    }
+    
