@@ -1,0 +1,5 @@
+(a+c)mod m=((a mod m)+(c mod m))mo dm
+
+(a−c)mod m=((a mod m)−(c mod m)+m)mod m
+
+(a⋅c)mod m=((a mod m)⋅(c mod m))mod m
