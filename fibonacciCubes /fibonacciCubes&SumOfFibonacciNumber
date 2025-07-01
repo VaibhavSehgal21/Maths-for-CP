@@ -1,0 +1,9 @@
+// property-1
+
+Fitting Fibonacci cubes into a larger box is reduced to checking:
+The box can accommodate the two largest cubes in the set (sizes Fn & Fn+1).
+This implies all smaller cubes will also fit.
+
+// property-2
+
+sum of first n fibonacci numbers = Fn+2 -1 ; 
